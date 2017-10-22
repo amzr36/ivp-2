@@ -18,7 +18,8 @@ import com.alejo_zr.exceldb.entidades.PatoFlex;
 public class PatologiaFlexActivity extends AppCompatActivity {
 
     private TextView tvIdDaño,tvIdSegmento,tvNombreCarreteraPatologiaActivity,tvCarrilDanio,tvAclaraciones,tvanchRepa,tvlarRepa,tvdanionombre,tvlarDanio,tvanchoDanio,
-            tvAbscisaPatoFlexActivity,tvLatPatoFlexActivity,tvLongFlexActivity,tvDireccionPatoFlex,tvSeveridadPatoFlexActivity;
+            tvAbscisaPatoFlexActivity,tvLatPatoFlexActivity,tvLongFlexActivity,tvDireccionPatoFlex,tvSeveridadPatoFlexActivity
+            ,tvNombreFoto_patoFlexActivity;
     private String path;
     private ImageView imgPatoFlex;
 
@@ -45,6 +46,7 @@ public class PatologiaFlexActivity extends AppCompatActivity {
 
         tvIdSegmento = (TextView) findViewById(R.id.tvIdSegmentoPatologiaFlexActivity);
         tvIdDaño = (TextView) findViewById(R.id.tvIdDañoPatoFlex);
+        tvNombreFoto_patoFlexActivity = (TextView) findViewById(R.id.tvNombreFoto_patoFlexActivity);
         tvDireccionPatoFlex = (TextView) findViewById(R.id.tvDireccionPatoFlex);
 
         imgPatoFlex = (ImageView) findViewById(R.id.imgDanio_PatoFlex) ;
@@ -70,6 +72,7 @@ public class PatologiaFlexActivity extends AppCompatActivity {
             tvAclaraciones.setText(patoFlex.getAclaraciones().toString());
             tvIdSegmento.setText(patoFlex.getId_segmento_patoFlex().toString());
             tvNombreCarreteraPatologiaActivity.setText(patoFlex.getNombre_carretera_patoFlex().toString());
+            tvNombreFoto_patoFlexActivity.setText(patoFlex.getNombreFoto().toString());
             tvIdDaño.setText(patoFlex.getId_patoFlex().toString());
             tvDireccionPatoFlex.setText(patoFlex.getFoto().toString());
 
@@ -97,7 +100,9 @@ public class PatologiaFlexActivity extends AppCompatActivity {
         tvanchoDanio = (TextView) findViewById(R.id.tvanchDanioPatoFlexActivity);
         tvIdSegmento = (TextView) findViewById(R.id.tvIdSegmentoPatologiaFlexActivity);
         tvIdDaño = (TextView) findViewById(R.id.tvIdDañoPatoFlex);
+        tvNombreFoto_patoFlexActivity = (TextView) findViewById(R.id.tvNombreFoto_patoFlexActivity);
         tvDireccionPatoFlex = (TextView) findViewById(R.id.tvDireccionPatoFlex);
+
 
 
         Bundle patologiaEnviado=getIntent().getExtras();
@@ -119,6 +124,7 @@ public class PatologiaFlexActivity extends AppCompatActivity {
             tvAclaraciones.setText(patoFlex.getAclaraciones().toString());
             tvIdSegmento.setText(patoFlex.getId_segmento_patoFlex().toString());
             tvNombreCarreteraPatologiaActivity.setText(patoFlex.getNombre_carretera_patoFlex().toString());
+            tvNombreFoto_patoFlexActivity.setText(patoFlex.getNombreFoto().toString());
             tvIdDaño.setText(patoFlex.getId_patoFlex().toString());
             tvDireccionPatoFlex.setText(patoFlex.getFoto().toString());
 
@@ -156,11 +162,15 @@ public class PatologiaFlexActivity extends AppCompatActivity {
                 intent.putExtra("tvLatitud",tvLatPatoFlexActivity.getText().toString());
                 intent.putExtra("tvLongitud",tvLongFlexActivity.getText().toString());
                 intent.putExtra("tvCarrilDanio",tvCarrilDanio.getText().toString());
-                intent.putExtra("tvAclaraciones",tvAclaraciones.getText().toString());
+                intent.putExtra("tvdanionombre",tvdanionombre.getText().toString());
+                intent.putExtra("tvSeveridadPatoFlexActivity",tvSeveridadPatoFlexActivity.getText().toString());
+                intent.putExtra("tvlarDanio",tvlarDanio.getText().toString());
+                intent.putExtra("tvanchDanio",tvanchoDanio.getText().toString());
                 intent.putExtra("tvanchRepa", tvanchRepa.getText().toString());
                 intent.putExtra("tvlarRepa",tvlarRepa.getText().toString());
-                intent.putExtra("tvdanionombre",tvdanionombre.getText().toString());
-                intent.putExtra("tvanchDanio",tvanchoDanio.getText().toString());
+                intent.putExtra("tvAclaraciones",tvAclaraciones.getText().toString());
+                intent.putExtra("tvDireccionPatoFlex",tvDireccionPatoFlex.getText().toString());
+                intent.putExtra("tvNombreFoto_patoFlexActivity",tvNombreFoto_patoFlexActivity.getText().toString());
                 intent.putExtra("tvIdSegmento",tvIdSegmento.getText().toString());
                 intent.putExtra("tvNombreCarreteraPatologiaActivity",tvNombreCarreteraPatologiaActivity.getText().toString());
                 intent.putExtra("tvIdDaño",tvIdDaño.getText().toString());

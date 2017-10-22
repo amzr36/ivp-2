@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.alejo_zr.exceldb.BaseDatos;
 import com.alejo_zr.exceldb.R;
-import com.alejo_zr.exceldb.Segmento.Flexible.SegmentoFlexActivity;
 import com.alejo_zr.exceldb.entidades.PatoFlex;
 import com.alejo_zr.exceldb.utilidades.Utilidades;
 
@@ -134,7 +133,8 @@ public class ConsultaPatologiaFlexActivity extends AppCompatActivity {
             patoFlex.setLargoRepa(cursor.getString(11));
             patoFlex.setAnchoRepa(cursor.getString(12));
             patoFlex.setAclaraciones(cursor.getString(13));
-            patoFlex.setFoto(cursor.getString(14));
+            patoFlex.setNombreFoto(cursor.getString(14));
+            patoFlex.setFoto(cursor.getString(15));
 
             listaPatologiasFlex.add(patoFlex);
 

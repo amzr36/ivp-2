@@ -344,14 +344,21 @@
             android:text="@string/nombre"
             android:visibility="invisible"/>
 
+        <TextView
+            android:id="@+id/tvNombreFoto_patoFlexActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nombre"
+            android:layout_below="@id/tvAclaracionesPatoFlexActivity"
+            android:visibility="invisible"/>
+
         <ImageView
             android:id="@+id/imgDanio_PatoFlex"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:src="@drawable/img_base"
-            android:layout_alignTop="@+id/tvDireccionPatoFlex"
-            />
+            android:layout_alignTop="@+id/tvDireccionPatoFlex"/>
 
-    </RelativeLayout>
+        </RelativeLayout>
 
 </ScrollView>
